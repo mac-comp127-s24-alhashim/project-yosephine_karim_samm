@@ -1,37 +1,50 @@
 package MyTimer;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
+
+/**
+ * This class represents a panel that displays quotes and provides a button to display to the next quote.
+ */
 public class QuotePanel extends JPanel {
     private JLabel quoteLabel;
-    private JButton quoteButton;
-    private Quotes quotes;
+    private JButton nextButton;
 
+    private String[] quotes = {
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Work hard in silence, let success be your noise. - Frank Ocean",
+        "In the midst of chaos, there is also opportunity. - Sun Tzu",
+        "Believe you can and you're halfway there. - Theodore Roosevelt"
+    };
+    private int currentQuoteIndex = 0;
+
+    /**
+     * Constructor. it constructs a new QuotePanel with quote label and next button.
+     */
     public QuotePanel() {
         setLayout(new BorderLayout());
-        setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        quoteLabel = new JLabel("", SwingConstants.CENTER);
-        quoteLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        quoteLabel = new JLabel(quotes[currentQuoteIndex]);
+        quoteLabel.setHorizontalAlignment(JLabel.CENTER);
+        add(quoteLabel, BorderLayout.CENTER);
 
-        quoteButton = new JButton("Generate Quote");
-        quoteButton.addActionListener(new ActionListener() {
+        nextButton = new JButton("Next Quote");
+        nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateQuoteLabel();
+                displayNextQuote();
             }
         });
-
-        add(quoteLabel, BorderLayout.CENTER);
-        add(quoteButton, BorderLayout.SOUTH);
-
-        quotes = new Quotes();
+        add(nextButton, BorderLayout.SOUTH);
     }
 
-    private void updateQuoteLabel() {
-        String randomQuote = quotes.getRandomQuote();
-        quoteLabel.setText(randomQuote);
+    /**
+     * Displays the next quote when the next button is clicked.
+     */
+    private void displayNextQuote() {
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        quoteLabel.setText(quotes[currentQuoteIndex]);
     }
+
 }
