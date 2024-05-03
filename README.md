@@ -11,6 +11,13 @@ In regard to running the software the requirements for the program are the MyTim
 
 Due to the time restriction associated with this project, the project doesn’t have a lot of complexity associated with it and thus doesn’t have any major limitations. One notable limitation is that after the timer restarts, the flower’s progress restarts immediately.
 
+![image](https://github.com/mac-comp127-s24-alhashim/project-yosephine_karim_samm/assets/157333938/e80e05fb-43d8-4d5d-aa55-5e49634278c6)
+
+![image](https://github.com/mac-comp127-s24-alhashim/project-yosephine_karim_samm/assets/157333938/4f419ea7-b5fb-420e-bb0f-8a881a6a37d9)
+
+
+
+
 
 
 
