@@ -15,6 +15,7 @@ Due to the time restriction associated with this project, the project doesn’t 
 
 ![image](https://github.com/mac-comp127-s24-alhashim/project-yosephine_karim_samm/assets/157333938/4f419ea7-b5fb-420e-bb0f-8a881a6a37d9)
 
+This is the link for our demo: https://www.loom.com/share/1db0f6b75554425c9c37698424ccf3e0?sid=acc283e4-e0f0-4f70-b973-b86e03e8f92b
 
 
 
